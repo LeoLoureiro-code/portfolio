@@ -1,0 +1,128 @@
+@import "variables";
+
+html * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $background-main;
+    height: 100%;
+    width: 100%;
+
+    aside:hover {
+        width: 230px;
+
+        .nav-item-name {
+            display: inline-block;
+        }
+    }
+}
+
+aside {
+    align-items: baseline;
+    background-color: $sidebar;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: baseline;
+    position: fixed;
+    transition: all 0.8s;
+    width: 110px;
+
+    #logo {
+        background-color: $logo;
+        color: $text;
+        font-family: $fontFamily;
+        font-size: 3rem;
+        font-weight: 700;
+        padding: 30px 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    nav {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        padding: 0 24px;
+
+        .nav-bar {
+            list-style-type: none;
+            padding: 50px 0;
+            vertical-align: baseline;
+
+            li {
+                padding: 20px 0;
+                vertical-align: baseline;
+                position: relative;
+
+                a {
+                    text-decoration: none;
+                }
+
+                i {
+                    color: white;
+                }
+
+                span {
+                    transition-duration: 0.2s;
+                    position: absolute;
+                    left: 55px;
+                    top: 30px;
+                    color: $text;
+                    display: none;
+                    font-family: $fontFamily;
+                    font-weight: 700;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+.outer-wraper {
+    align-items: center;
+    display: flex;
+    font-family: $fontFamily;
+    height: 100vh;
+    justify-content: center;
+    margin-left: 110px;
+    width: calc(100vw - 110px);
+    clear: both;
+
+    .inner-wraper {
+        padding: 0 50px;
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+}
+
+header{
+
+    height: 100vh;
+    width: 100%;
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .salute{
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    h1{
+        font-size: 5rem;
+
+        .lastname{
+            color: #296090;
+        }
+    }
+
+    .intro{
+        font-size: 1.5rem;
+    }
+}
