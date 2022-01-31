@@ -11,6 +11,32 @@
 </head>
 
 <body>
+    <div class="menu">
+        <nav>
+            <ul class="nav-bar">
+                <li id="nav-item">
+                    <a href="#home">
+                        <span class="">Home</span>
+                    </a>
+                </li>
+                <li id="nav-item">
+                    <a href="#about">
+                        <span class="nav-item-name">About</span>
+                    </a>
+                </li>
+                <li id="nav-item">
+                    <a href="#portfolio">
+                        <span class="nav-item-name">Portfolio</span>
+                    </a>
+                </li>
+                <li id="nav-item">
+                    <a href="#contact">
+                        <span class="nav-item-name">Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
     <aside>
         <p id="logo">LL</p>
         <nav>
@@ -25,6 +51,12 @@
                     <a href="#about">
                         <i class="fas fa-user fa-2x"></i>
                         <span class="nav-item-name">About</span>
+                    </a>
+                </li>
+                <li id="nav-skills">
+                    <a href="#skills">
+                        <i class="fas fa-code fa-2x"></i>
+                        <span class="nav-item-name">Skills</span>
                     </a>
                 </li>
                 <li id="nav-portfolio">
@@ -42,26 +74,72 @@
             </ul>
         </nav>
     </aside>
-    <div class="outer-wraper">
+    <div class="outer-wrapper">
         <div class="inner-wrapper">
-            <header>
+            <header id="home">
                 <div class="intro-div">
                     <p class="salute">Hello, my name is</p>
                     <h1>Leonardo <span class="lastname">Loureiro</span></h1>
                     <p class="intro">A <span class="job">front-end developer</span> passionate to create digital solution to any real-life problem.</p>
                     <div class="resume-social">
-                        <a href="/images/myw3schoolsimage.jpg" class="resume-btn" download>Resumé</a>
-                        <a href="" class="social"><img src="" alt="">Linkedin</a>
-                        <a href="" class="social"><img src="" alt="">Github</a>
-                        <a href="" class="social"><img src="" alt="">Twitter</a>
+                        <ul>
+                            <li><button class="resume-btn"><a href="" download>Resumé</a></button></li>
+                            <li class="social"><a href="https://www.linkedin.com/in/leonardo-loureiro-/" target="_blank"><img src="./Assets/Images/linkedin.png" alt="Linkedin logo"></a></li>
+                            <li class="social"><a href="https://github.com/LeoLoureiro-code" target="_blank"><img src="./Assets/Images/github.png" alt="Github logo"></a></li>
+                            <li class="social"> <a href="https://twitter.com/ecw_leo" target="_blank"><img src="./Assets/Images/twitter.png" alt="Twitter logo"></a></li>
+                        </ul>
+
                     </div>
                 </div>
             </header>
             <main>
-                <section class="about-section" id="about">
-                    <div class="about">
-
+                <section id="about">
+                    <h2 class="section-title">About me</h2>
+                    <div class="section-background">
+                        <p class="section-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sapien et ligula ullamcorper malesuada proin libero nunc consequat. Nulla facilisi nullam vehicula ipsum a arcu cursus. Eleifend donec pretium vulputate sapien nec sagittis. Justo donec enim diam vulputate ut pharetra sit. Sit amet porttitor eget dolor morbi non arcu risus. Orci ac auctor augue mauris augue. Arcu dictum varius duis at consectetur lorem. Dui faucibus in ornare quam viverra orci.</p>
                     </div>
+                </section>
+                <section id="skills">
+                    <h2 class="section-title">Skills</h2>
+                    <div class="section-skills">
+                        <ul class="skills-list">
+                            <li class="skill">
+                                <img src="./Assets/Images/html.png" alt="html icon" class="skill-icon">
+                                <p class="skill-name">HTML</p>
+                            </li>
+                            <li class="skill">
+                                <img src="./Assets/Images/css.png" alt="css html" class="skill-icon">
+                                <p class="skill-name">CSS</p>
+                            </li>
+                            <li class="skill">
+                                <img src="./Assets/Images/javascript.png" alt="javascript icon" class="skill-icon">
+                                <p class="skill-name">Javascript</p>
+                            </li>
+                            <li class="skill">
+                                <img src="./Assets/Images/sass.png" alt="sass icon" class="skill-icon">
+                                <p class="skill-name">SASS</p>
+                            </li>
+                            <li class="skill">
+                                <img src="./Assets/Images/git.png" alt="git icon" class="skill-icon">
+                                <p class="skill-name">Git</p>
+                            </li>
+                            <li class="skill">
+                                <img src="./Assets/Images/windows.png" alt="windows icon" class="skill-icon">
+                                <p class="skill-name">Windows</p>
+                            </li>
+                            <li class="skill">
+                                <img src="./Assets/Images/photoshop.png" alt="photoshop icon" class="skill-icon">
+                                <p class="skill-name">Photoshop</p>
+                            </li>
+                            <li class="skill">
+                                <img src="./Assets/Images/visualstudiocode.png" alt="photoshop icon" class="skill-icon">
+                                <p class="skill-name">VS Code</p>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="portfolio">
+                    
                 </section>
             </main>
         </div>

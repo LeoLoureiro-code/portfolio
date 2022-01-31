@@ -6,10 +6,48 @@ html * {
           box-sizing: border-box;
 }
 
+.menu {
+  width: 100vw;
+  height: 100vh;
+  background-color: #132F70;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.menu nav {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.menu nav ul {
+  list-style-type: none;
+}
+
+.menu nav ul li {
+  padding: 20px;
+}
+
+.menu nav ul li a {
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f2f2f2;
+}
+
 body {
   background-color: #f3f2f2;
-  height: 100%;
-  width: 100%;
 }
 
 body aside:hover {
@@ -42,6 +80,12 @@ aside {
   width: 110px;
 }
 
+@media screen and (max-width: 768px) {
+  aside {
+    left: -330px;
+  }
+}
+
 aside #logo {
   background-color: #0a1c47;
   color: #f2f2f2;
@@ -60,10 +104,10 @@ aside nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 100%;
   padding: 0 24px;
 }
 
@@ -74,13 +118,12 @@ aside nav .nav-bar {
 }
 
 aside nav .nav-bar li {
-  padding: 20px 0;
+  padding: 20px 10px;
   vertical-align: baseline;
   position: relative;
-}
-
-aside nav .nav-bar li a {
-  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  border-radius: 10px;
 }
 
 aside nav .nav-bar li i {
@@ -88,8 +131,6 @@ aside nav .nav-bar li i {
 }
 
 aside nav .nav-bar li span {
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
   position: absolute;
   left: 55px;
   top: 30px;
@@ -100,25 +141,21 @@ aside nav .nav-bar li span {
   margin-left: 10px;
 }
 
-.outer-wraper {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-family: "Raleway", sans-serif;
-  height: 100vh;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.outer-wrapper {
+  width: calc(100% - 110px);
   margin-left: 110px;
-  width: calc(100vw - 110px);
-  clear: both;
+  overflow: hidden;
 }
 
-.outer-wraper .inner-wraper {
-  padding: 0 50px;
+@media screen and (max-width: 768px) {
+  .outer-wrapper {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.inner-wrapper {
+  padding: 0 33px;
   max-width: 1140px;
   margin: 0 auto;
 }
@@ -139,6 +176,15 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  font-family: "Raleway", sans-serif;
+  clear: left;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    width: 70%;
+    margin: 0 auto;
+  }
 }
 
 header .salute {
@@ -156,5 +202,161 @@ header h1 .lastname {
 
 header .intro {
   font-size: 1.5rem;
+}
+
+.resume-social {
+  margin-top: 40px;
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.resume-social ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media screen and (max-width: 768px) {
+  .resume-social ul {
+    width: 100%;
+  }
+}
+
+.resume-social ul .social {
+  background-color: #f3f2f2;
+  border-radius: 5px;
+  position: relative;
+  -webkit-box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
+  padding: 5px;
+}
+
+.resume-social ul .social img {
+  margin: auto;
+  display: block;
+  height: 2rem;
+  width: 100%;
+}
+
+.resume-social ul .resume-btn {
+  background-color: #132F70;
+  border: none;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
+  padding: 15px 45px;
+}
+
+.resume-social ul .resume-btn a {
+  color: #f3f2f2;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+main {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Raleway", sans-serif;
+}
+
+section {
+  padding: 30px;
+  margin-bottom: 9rem;
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    padding: 0;
+    margin-bottom: 3rem;
+  }
+}
+
+section .section-title {
+  font-size: 2.5rem;
+}
+
+section .section-paragraph {
+  background-color: #296090;
+  border-radius: 25px;
+  color: #f2f2f2;
+  font-size: 1.4rem;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.section-skills {
+  background-color: #296090;
+  border-radius: 10px;
+  margin-bottom: 9rem;
+  border-radius: 25px;
+}
+
+.section-skills .skills-list {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.section-skills .skill {
+  background-color: #f3f2f2;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  width: 100px;
+}
+
+.section-skills .skill .skill-icon {
+  margin: auto;
+  display: block;
+}
+
+.section-skills .skill .skill-name {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  color: #000;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.section-skills .skill:hover {
+  -webkit-box-shadow: 0px 2px 10px 7px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 2px 10px 7px rgba(0, 0, 0, 0.5);
 }
 /*# sourceMappingURL=index.css.map */
