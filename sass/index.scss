@@ -48,8 +48,6 @@ body {
     }
 }
 
-
-
 aside {
     align-items: baseline;
     background-color: $sidebar;
@@ -86,13 +84,23 @@ aside {
             padding: 50px 0;
             vertical-align: baseline;
 
-
             li {
-                padding: 20px 10px;
                 vertical-align: baseline;
                 position: relative;
                 transition: all 0.5s;
-                border-radius: 10px;        
+                border-radius: 10px;
+
+                a {
+                    padding: 13px 17px;
+                    display: inline-block;
+                    margin-bottom: 10px;
+                    font-size: 1.3rem;
+                    -webkit-transition-duration: 0.25s;
+                    transition-duration: 0.25s;
+                    border-radius: 6px;
+                    width: 100%;
+                    position: relative;
+                }
 
                 i {
                     color: white;
@@ -101,7 +109,7 @@ aside {
                 span {
                     position: absolute;
                     left: 55px;
-                    top: 30px;
+                    top: 12px;
                     color: $text;
                     display: none;
                     font-family: $fontFamily;
@@ -141,6 +149,7 @@ header {
     @media screen and(max-width: 768px) {
         width: 70%;
         margin: 0 auto;
+        text-align: center;
     }
 
     .salute {
@@ -193,19 +202,16 @@ header {
             }
         }
 
-        .resume-btn {
+        .resume {
             background-color: $sidebar;
+            color: $background-main;
             border: none;
             border-radius: 10px;
             box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 700;
             padding: 15px 45px;
-
-            a {
-                color: $background-main;
-                text-decoration: none;
-                font-size: 1rem;
-                font-weight: 700;
-            }
         }
     }
 }
@@ -218,7 +224,7 @@ main {
 
 section {
     padding: 30px;
-    margin-bottom: 9rem;
+    margin-bottom: 12rem;
 
     @media screen and (max-width: 768px) {
         padding: 0;
@@ -242,7 +248,6 @@ section {
 .section-skills {
     background-color: $background-section;
     border-radius: 10px;
-    margin-bottom: 9rem;
     border-radius: 25px;
 
     .skills-list {
@@ -278,4 +283,72 @@ section {
     .skill:hover {
         box-shadow: 0px 2px 10px 7px rgba(0, 0, 0, 0.5);
     }
+}
+
+.section-portfolio{
+    background-color: $background-section;
+    border-radius: 10px;
+    margin-bottom: 9rem;
+    border-radius: 25px;
+
+    .project{
+        display: flex;
+        padding: 30px;
+        margin-top: 20px;
+
+        @media screen and (max-width: 900px) {
+            flex-direction: column;
+            margin-bottom: 2rem;
+        }
+
+
+        .project-img{
+
+            img{
+                border-radius: 10px;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .project-info{
+            color: $text;
+            padding: 0 25px;
+            text-align: center;
+
+            .project-title{
+                
+                font-size: 2.5rem;
+            }
+
+            .technologies{
+                font-size: 1.3rem;
+                font-weight: 600;
+                margin-bottom: 1rem;
+
+                .tech{
+                    color: $tech;
+                }
+            }
+
+            ul{
+                margin-left: 1rem;
+            }
+
+            .project-links{
+               align-items: center;
+               display: flex;
+               justify-content: space-evenly;
+               margin-top: 20px;
+
+               a{
+                color: $tech;
+                text-decoration: none;
+                font-size: 1rem;
+                font-weight: 700;
+               }
+            }
+        }
+    }
+    
 }
